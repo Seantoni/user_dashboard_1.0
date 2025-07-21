@@ -1,0 +1,433 @@
+º<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleGo Dashboard</title>
+    <meta name="description" content="Gestiona tus recompensas y descubre nuevas oportunidades con SimpleGo">
+
+    
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://oferta-uploads-prod.s3.us-east-1.amazonaws.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+<body>
+    <!-- Header with improved mobile support -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Single Banner Section -->
+        <section class="special-banner-section">
+            <div class="banner-container">
+                <img src="https://oferta-uploads-prod.s3.us-east-1.amazonaws.com/pictures/others/SimpleGo/BANNER%20REFE%20page.png?_t=1745534267" alt="SimpleGo Banner" class="banner-image">
+            </div>
+        </section>
+        
+        <!-- Enhanced Balance Section with visual improvements -->
+        <section class="balance-section minimal-balance-section">
+            <div class="balance-card-container">
+                    <div class="balance-info">
+                    <div class="balance-label">Tu balance</div>
+                    <div class="balance-amount">$125.50</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced Rewards Section -->
+        <section id="rewards" class="section">
+            <div class="section-header">
+                <h2 class="section-title">MIS TARJETAS DE RECOMPENSAS</h2>
+
+            </div>
+            
+            <div class="rewards-cards-container">
+            <div class="rewards-cards-grid">
+            <div class="reward-card monthly-challenge clickable-card" onclick="openTermsModal('monthly-challenge')">
+                <div class="reward-card-content">
+                    <div class="challenge-header">
+                        <h3 class="reward-card-title">🏆 Reto del Mes</h3>
+                        <div class="challenge-badge">DICIEMBRE</div>
+                    </div>
+                    <div class="challenge-description">Visita 4 restaurantes diferentes</div>
+                    <div class="visits-remaining">
+                        <span class="remaining-number">2</span>
+                        <span class="remaining-text">de 4 completados</span>
+                    </div>
+                    <div class="loyalty-card">
+                        <div class="challenge-progress-bar">
+                            <div class="challenge-progress-fill" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="challenge-reward-section">
+                        <span class="challenge-reward">Recompensa: +$20</span>
+                    </div>
+                    <div class="last-visit">
+                        <span class="last-visit-text">Quedan 18 días</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reward-card olive-garden clickable-card" data-card-id="olive-garden" onclick="openTermsModal('olive-garden')">
+                <div class="reward-card-header">
+                    <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('olive-garden')" title="Eliminar tarjeta">
+                        <span class="remove-icon">×</span>
+                    </button>
+                </div>
+                <div class="reward-card-content">
+                    <h3 class="reward-card-title">Postre Gratis en<br>Olive Garden</h3>
+                    <div class="visits-remaining">
+                        <span class="remaining-number">3</span>
+                        <span class="remaining-text">visitas restantes</span>
+                    </div>
+                    <div class="loyalty-card">
+                        <div class="loyalty-stamps">
+                            <div class="stamp completed early"></div>
+                            <div class="stamp completed early"></div>
+                            <div class="stamp completed early"></div>
+                            <div class="stamp completed mid"></div>
+                            <div class="stamp completed mid"></div>
+                            <div class="stamp completed mid"></div>
+                            <div class="stamp completed recent"></div>
+                            <div class="stamp empty"></div>
+                            <div class="stamp empty"></div>
+                            <div class="stamp empty"></div>
+                        </div>
+                    </div>
+                    <div class="last-visit">
+                        <span class="last-visit-text">Última visita: 15 de abril</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reward-card papa-johns clickable-card" data-card-id="papa-johns" onclick="openTermsModal('papa-johns')">
+                <div class="reward-card-header">
+                    <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('papa-johns')" title="Eliminar tarjeta">
+                        <span class="remove-icon">×</span>
+                    </button>
+                </div>
+                <div class="reward-card-content">
+                    <h3 class="reward-card-title">Pizza Gratis en<br>Papa Johns</h3>
+                    <div class="visits-remaining">
+                        <span class="remaining-number">2</span>
+                        <span class="remaining-text">visitas restantes</span>
+                    </div>
+                    <div class="loyalty-card">
+                        <div class="loyalty-stamps">
+                            <div class="stamp completed early"></div>
+                            <div class="stamp completed early"></div>
+                            <div class="stamp completed early"></div>
+                            <div class="stamp completed mid"></div>
+                            <div class="stamp completed mid"></div>
+                            <div class="stamp completed mid"></div>
+                            <div class="stamp completed recent"></div>
+                            <div class="stamp completed recent"></div>
+                            <div class="stamp empty"></div>
+                            <div class="stamp empty"></div>
+                        </div>
+                    </div>
+                    <div class="last-visit">
+                        <span class="last-visit-text">Última visita: 18 de abril</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="recompensas.html" class="reward-card add-more">
+                <div class="reward-card-content">
+                    <div class="add-more-icon">
+                        <span class="plus-symbol">+</span>
+                    </div>
+                    <h3 class="add-more-title">Desbloquea más<br>recompensas</h3>
+                    <p class="add-more-description">Explora restaurantes cercanos y comienza nuevas tarjetas de lealtad</p>
+                    <div class="add-more-button">
+                        <span>Explorar</span>
+                    </div>
+                </div>
+            </a>
+
+
+            </div>
+                
+                <!-- Scroll indicators for mobile -->
+                <div class="scroll-indicators">
+                    <div class="scroll-indicator active" data-slide="0"></div>
+                    <div class="scroll-indicator" data-slide="1"></div>
+                    <div class="scroll-indicator" data-slide="2"></div>
+                    <div class="scroll-indicator" data-slide="3"></div>
+            </div>
+        </div>
+        </section>
+        
+        <!-- Side by Side Cards Section -->
+        <section class="side-by-side-cards-section">
+            <div class="side-by-side-container">
+                <!-- SimpleGo Cards -->
+                <div class="simplego-cards-container">
+                    <a href="https://simplego.ofertasimple.com/simplego/cards" target="_blank" rel="noopener noreferrer" class="simplego-cards-content">
+                        <div class="simplego-cards-header">
+                            <div class="simplego-cards-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="simplego-cards-text">
+                                <h3 class="simplego-cards-title">Conecta más tarjetas</h3>
+                                                                    <p class="simplego-cards-description">Agrega tarjetas adicionales VISA de crédito y débito y gana.</p>
+                            </div>
+                        </div>
+                        <div class="simplego-cards-cta">
+                            <span>Agregar Tarjetas</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Business Map -->
+                <div class="business-map-container">
+                    <a href="https://simplego.ofertasimple.com/simplego/map" target="_blank" rel="noopener noreferrer" class="business-map-content">
+                        <div class="business-map-header">
+                            <div class="business-map-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="business-map-text">
+                                <h3 class="business-map-title">Descubre Negocios Cercanos</h3>
+                                <p class="business-map-description">Encuentra cientos de comercios en tu área donde puedes ganar recompensas</p>
+                            </div>
+                        </div>
+                        <div class="business-map-cta">
+                            <span>Ver Mapa</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            
+            <div class="section redeem-section">
+                <div class="section-header">
+                    <h2 class="section-title">CANJEA TUS CRÉDITOS</h2>
+                </div>
+                
+                <div class="redeem-cards">
+                    <div class="redeem-card featured-card">
+                        <div class="redeem-card-content">
+                            <img src="https://oferta-uploads-prod.s3.us-east-1.amazonaws.com/pictures/others/OfertaSimple%20Assets/Asset%2075.png?_t=1743086513" alt="OfertaSimple.com" class="redeem-logo">
+                            <p class="redeem-description">Descuentos exclusivos en OfertaSimple</p>
+                        </div>
+                        <a href="https://www.ofertasimple.com" target="_blank" rel="noopener noreferrer" class="redeem-cta primary">
+                            <span>Canjear ahora</span>
+                        </a>
+                    </div>
+                    
+                    <div class="redeem-card">
+                        <div class="redeem-card-content">
+                            <h3 class="redeem-card-title">Gift Cards</h3>
+                            <p class="redeem-description">Tarjetas de regalo para tus tiendas favoritas</p>
+                        </div>
+                        <a href="https://simplego.ofertasimple.com/simplego/gift-cards" target="_blank" rel="noopener noreferrer" class="redeem-cta secondary">
+                            <span>Canjear Créditos</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Referral Section inside Redeem Section -->
+                <div class="referral-section-inner">
+                    <div class="section-header">
+                        <h3 class="section-subtitle">REFIERE Y GANA</h3>
+                    </div>
+                    
+                    <div class="referral-banner">
+                        <img src="https://oferta-uploads-prod.s3.us-east-1.amazonaws.com/pictures/others/SimpleGo/BANNER%20REFE%20page.png?_t=1745534267" alt="Refiere y Gana">
+                    </div>
+                    
+                    <div class="referral-section">
+                        <div class="referral-content">
+                            <h4 class="referral-title">¡Invita a tus amigos y gana créditos!</h4>
+                            <p class="referral-description">Recibé $10 por cada referido luego que realice su primera transacción</p>
+                            <div class="referral-code-container">
+                                <input type="text" id="referralCode" value="MARIA2024" readonly class="referral-input">
+                                <button id="copyButton" class="copy-button">Copiar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section historic-transactions-section">
+                <div class="section-header">
+                    <h2 class="section-title">HISTORIAL DE TRANSACCIONES</h2>
+                    <p class="section-subtitle">Revisa tu historial de recompensas recientes</p>
+                </div>
+                
+                <div class="transactions-table-container">
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Baker's Café</div>
+                            <div class="transaction-date">19 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$2.00</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Café Aroma</div>
+                            <div class="transaction-date">17 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$2.25</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Sportify</div>
+                            <div class="transaction-date">15 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$4.25</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Cinema World</div>
+                            <div class="transaction-date">12 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$3.50</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">The Steakhouse</div>
+                            <div class="transaction-date">10 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$5.75</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Costa Coffee</div>
+                            <div class="transaction-date">8 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$1.75</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Metro Deli</div>
+                            <div class="transaction-date">7 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$3.25</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Pizza Palace</div>
+                            <div class="transaction-date">5 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$4.50</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Burger Haven</div>
+                            <div class="transaction-date">3 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$3.75</div>
+                    </div>
+                    <div class="transaction-row">
+                        <div class="transaction-info">
+                            <div class="transaction-name">Sweet Treats</div>
+                            <div class="transaction-date">1 de Abril</div>
+                        </div>
+                        <div class="transaction-amount positive">+$2.50</div>
+                    </div>
+                    <div class="pagination-container">
+                        <button class="pagination-btn" id="prevPageBtn" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span class="pagination-info" id="pageInfo"></span>
+                        <button class="pagination-btn" id="nextPageBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+
+        </div>
+    </div>
+    
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal-dialog" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>¡Bienvenido a tu Panel SimpleGo!</h3>
+                <button id="closeWelcomeModal" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Descubre todo lo que puedes hacer:</p>
+                
+                <div class="feature-highlight">
+                    <span class="highlight-badge">¡NUEVO!</span>
+                    <div class="highlight-header">
+                        <h4>Mis Tarjetas de Recompensas</h4>
+                    </div>
+                    <p>Adquiere tarjetas de lealtad y obtén más recompensas.</p>
+                    <a href="recompensas.html" class="highlight-cta">
+                        Ver todas <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="welcome-features">
+                    <p class="feature-text">
+                        <span class="feature-title">Tu Balance, Créditos e Historial</span>
+                        Revisa tus créditos acumulados, historial de transacciones y canjéalos por experiencias increíbles y Gift Cards. Todo en un solo lugar.
+                    </p>
+                </div>
+
+                <div class="feature-coming-soon">
+                    <p>Sigue explorando tu panel y mantente atento a las nuevas funciones que iremos lanzando. ¡Lo mejor está por venir! 🚀</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="gotItBtn" class="btn btn-primary">¡Entendido!</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">© 2023 SimpleGo. Todos los derechos reservados.</div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Terms and Conditions Modal -->
+    <div id="termsModal" class="terms-modal-overlay">
+        <div class="terms-modal-dialog">
+            <div class="terms-modal-header">
+                <h3 id="modalTitle">Términos y Condiciones</h3>
+                <button class="terms-modal-close" onclick="closeTermsModal()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="terms-modal-body">
+                <div id="modalContent">
+                    <!-- Content will be dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

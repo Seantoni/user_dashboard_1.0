@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recompensas Disponibles - SimpleGo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://oferta-uploads-prod.s3.us-east-1.amazonaws.com/pictures/others/SimpleGo/SGO_Marca_9.png?_t=1745530830" alt="SimpleGo" style="height: 40px; display: block;">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="rewards-page-header">
+            <h1 class="page-title animate-fadeInUp">Tarjetas Disponibles</h1>
+        </div>
+        
+        <div class="rewards-table-container animate-fadeInUp">
+            <div class="add-card-helper">
+                <i class="fas fa-hand-pointer"></i>
+                <span>Haz clic en "Agregar" para activar tu tarjeta de lealtad</span>
+            </div>
+            <table class="rewards-table">
+                <thead>
+                    <tr>
+                        <th>Negocio</th>
+                        <th>Recompensa</th>
+                        <th>Acción Requerida</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="rewards-row active">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">Olive Garden</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Postre Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">10 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('olive-garden')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button added" disabled>
+                                    <i class="fas fa-check"></i>
+                                    Agregada
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row active">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">Papa Johns</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Pizza Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">10 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('papa-johns')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button added" disabled>
+                                    <i class="fas fa-check"></i>
+                                    Agregada
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">Starbucks</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Bebida Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">12 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('starbucks')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button add">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">McDonald's</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Combo Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">15 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('mcdonalds')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button add">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">Chipotle</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Burrito Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">8 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('chipotle')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button add">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">KFC</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Bucket Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">12 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('kfc')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button add">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">Subway</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Sub Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">10 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('subway')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button add">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="rewards-row">
+                        <td>
+                            <div class="business-info">
+                                <span class="business-name">Baskin-Robbins</span>
+                            </div>
+                        </td>
+                        <td class="reward-cell" data-label="Recompensa">Helado Gratis</td>
+                        <td class="action-cell" data-label="Acción Requerida">6 visitas</td>
+                        <td>
+                            <div class="card-actions">
+                                <button class="info-button" onclick="openTermsModal('baskin-robbins')" title="Ver información">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="cta-button add">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="rewards-actions">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Volver al Panel
+            </a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">© 2023 SimpleGo. Todos los derechos reservados.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Rewards Welcome Modal -->
+    <div id="rewardsWelcomeModal" class="modal-overlay">
+        <div class="modal-dialog" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>¡Estrena tus Tarjetas de Lealtad!</h3>
+                <button id="closeRewardsWelcomeModal" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-subtitle">¿Cómo funciona?</h4>
+                
+                <div class="rewards-steps">
+                    <div class="reward-step">
+                        <div class="step-icon">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <div class="step-content">
+                            <h5>Actívala con un toque</h5>
+                            <p>Cada negocio tiene su propia tarjeta.</p>
+                        </div>
+                    </div>
+
+                    <div class="reward-step">
+                        <div class="step-icon">
+                            <i class="fas fa-stamp"></i>
+                        </div>
+                        <div class="step-content">
+                            <h5>Gana sellos de manera automática</h5>
+                            <p>Recibe 1 sello por cada transacción que realices en el comercio de la tarjeta escogida.</p>
+                        </div>
+                    </div>
+
+                    <div class="reward-step">
+                        <div class="step-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="step-content">
+                            <h5>Desbloquea recompensas</h5>
+                            <p>Completa la tarjeta y obtén postres, pizzas, créditos SimpleGo o cashback — no es solo "algo gratis", ¡puedes ganar aún más!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="startRewardsBtn" class="btn btn-primary">¡Empezar ahora!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="termsModal" class="terms-modal-overlay">
+        <div class="terms-modal-dialog">
+            <div class="terms-modal-header">
+                <h3 id="modalTitle">Términos y Condiciones</h3>
+                <button class="terms-modal-close" onclick="closeTermsModal()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="terms-modal-body">
+                <div id="modalContent">
+                    <!-- Content will be dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="rewards-script.js"></script>
+</body>
+</html> 
