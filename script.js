@@ -329,11 +329,21 @@ function showCopyError() {
 
 // Enhanced reward card removal with confirmation
 function removeRewardCard(cardId) {
+    console.log('removeRewardCard called with cardId:', cardId);
     const card = document.querySelector(`[data-card-id="${cardId}"]`);
-    if (!card) return;
+    if (!card) {
+        console.error('Card not found for cardId:', cardId);
+        return;
+    }
     
     // Get the business name for the confirmation message
-    const businessName = card.querySelector('.reward-card-title').textContent.split(' en')[0];
+    const brandNameElement = card.querySelector('.brand-name');
+    if (!brandNameElement) {
+        console.error('Brand name element not found in card');
+        return;
+    }
+    const businessName = brandNameElement.textContent;
+    console.log('Business name found:', businessName);
     
     // Show confirmation dialog
     showRemoveConfirmation(businessName, () => {

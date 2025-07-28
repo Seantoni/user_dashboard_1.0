@@ -34,7 +34,7 @@
     <div class="container">
         <!-- Single Banner Section -->
         <section class="special-banner-section">
-            <div class="banner-container">
+                <div class="banner-container">
                 <img src="https://oferta-uploads-prod.s3.us-east-1.amazonaws.com/pictures/others/SimpleGo/BANNER%20REFE%20page.png?_t=1745534267" alt="SimpleGo Banner" class="banner-image">
             </div>
         </section>
@@ -52,97 +52,340 @@
         <!-- Enhanced Rewards Section -->
         <section id="rewards" class="section">
             <div class="section-header">
-                <h2 class="section-title">MIS TARJETAS DE RECOMPENSAS</h2>
+                <h2 class="section-title">MIS TARJETAS DE LEALTAD</h2>
 
             </div>
             
             <div class="rewards-cards-container">
             <div class="rewards-cards-grid">
-            <div class="reward-card monthly-challenge clickable-card" onclick="openTermsModal('monthly-challenge')">
-                <div class="reward-card-content">
-                    <div class="challenge-header">
-                        <h3 class="reward-card-title">🏆 Reto del Mes</h3>
-                        <div class="challenge-badge">DICIEMBRE</div>
-                    </div>
-                    <div class="challenge-description">Visita 4 restaurantes diferentes</div>
-                    <div class="visits-remaining">
-                        <span class="remaining-number">2</span>
-                        <span class="remaining-text">de 4 completados</span>
-                    </div>
-                    <div class="loyalty-card">
-                        <div class="challenge-progress-bar">
-                            <div class="challenge-progress-fill" style="width: 50%;"></div>
+            <div class="reward-card monthly-challenge clickable-card enhanced-design" onclick="openTermsModal('monthly-challenge')">
+                <div class="reward-card-header">
+                    <div class="brand-section">
+                        <div class="brand-info">
+                            <h4 class="brand-name">🏆 Reto del Mes</h4>
+                            <span class="reward-type">Recompensa: +$20</span>
                         </div>
                     </div>
-                    <div class="challenge-reward-section">
-                        <span class="challenge-reward">Recompensa: +$20</span>
+                </div>
+                <div class="reward-card-content">
+                    <div class="stamp-section">
+                        <div class="stamp-header">
+                            <div class="visits-info">
+                                <span class="stamp-count">2 <span class="remaining-word">de 4 completados</span></span>
+                            </div>
+                        </div>
+                        <div class="stamp-card">
+                            <div class="challenge-description">Visita 4 restaurantes diferentes</div>
+                            <div class="challenge-progress-bar">
+                                <div class="challenge-progress-fill" style="width: 50%;"></div>
+                            </div>
+                            <div class="challenge-time-remaining">
+                                <span class="time-text">Quedan 18 días</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="last-visit">
-                        <span class="last-visit-text">Quedan 18 días</span>
+                    <div class="card-footer">
                     </div>
                 </div>
             </div>
             
-            <div class="reward-card olive-garden clickable-card" data-card-id="olive-garden" onclick="openTermsModal('olive-garden')">
+            <div class="reward-card olive-garden clickable-card enhanced-design" data-card-id="olive-garden" onclick="openTermsModal('olive-garden')">
                 <div class="reward-card-header">
+                    <div class="brand-section">
+                        <div class="brand-info">
+                            <h4 class="brand-name">Olive Garden</h4>
+                            <span class="reward-type">Postre Gratis</span>
+                        </div>
+                    </div>
                     <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('olive-garden')" title="Eliminar tarjeta">
                         <span class="remove-icon">×</span>
                     </button>
                 </div>
                 <div class="reward-card-content">
-                    <h3 class="reward-card-title">Postre Gratis en<br>Olive Garden</h3>
-                    <div class="visits-remaining">
-                        <span class="remaining-number">3</span>
-                        <span class="remaining-text">visitas restantes</span>
+                    <div class="stamp-section">
+                        <div class="stamp-header">
+                            <div class="visits-info">
+                                <span class="stamp-count">3 <span class="remaining-word">visitas restantes</span></span>
+                            </div>
+
+                        </div>
+                        <div class="stamp-card">
+                            <div class="stamp-grid">
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped recent">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp empty next">
+                                    <div class="stamp-number">8</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">9</div>
+                                </div>
+                                <div class="stamp empty reward-stamp">
+                                    <i class="fas fa-gift"></i>
+                                    <span class="reward-text">GRATIS</span>
+                                </div>
                     </div>
-                    <div class="loyalty-card">
-                        <div class="loyalty-stamps">
-                            <div class="stamp completed early"></div>
-                            <div class="stamp completed early"></div>
-                            <div class="stamp completed early"></div>
-                            <div class="stamp completed mid"></div>
-                            <div class="stamp completed mid"></div>
-                            <div class="stamp completed mid"></div>
-                            <div class="stamp completed recent"></div>
-                            <div class="stamp empty"></div>
-                            <div class="stamp empty"></div>
-                            <div class="stamp empty"></div>
                         </div>
                     </div>
-                    <div class="last-visit">
-                        <span class="last-visit-text">Última visita: 15 de abril</span>
+                    <div class="card-footer">
                     </div>
                 </div>
             </div>
             
-            <div class="reward-card papa-johns clickable-card" data-card-id="papa-johns" onclick="openTermsModal('papa-johns')">
+            <div class="reward-card papa-johns clickable-card enhanced-design" data-card-id="papa-johns" onclick="openTermsModal('papa-johns')">
                 <div class="reward-card-header">
+                    <div class="brand-section">
+                        <div class="brand-info">
+                            <h4 class="brand-name">Papa Johns</h4>
+                            <span class="reward-type">Pizza Gratis</span>
+                        </div>
+                    </div>
                     <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('papa-johns')" title="Eliminar tarjeta">
                         <span class="remove-icon">×</span>
                     </button>
                 </div>
                 <div class="reward-card-content">
-                    <h3 class="reward-card-title">Pizza Gratis en<br>Papa Johns</h3>
-                    <div class="visits-remaining">
-                        <span class="remaining-number">2</span>
-                        <span class="remaining-text">visitas restantes</span>
-                    </div>
-                    <div class="loyalty-card">
-                        <div class="loyalty-stamps">
-                            <div class="stamp completed early"></div>
-                            <div class="stamp completed early"></div>
-                            <div class="stamp completed early"></div>
-                            <div class="stamp completed mid"></div>
-                            <div class="stamp completed mid"></div>
-                            <div class="stamp completed mid"></div>
-                            <div class="stamp completed recent"></div>
-                            <div class="stamp completed recent"></div>
-                            <div class="stamp empty"></div>
-                            <div class="stamp empty"></div>
+                    <div class="stamp-section">
+                        <div class="stamp-header">
+                            <div class="visits-info">
+                                <span class="stamp-count">2 <span class="remaining-word">visitas restantes</span></span>
+                            </div>
+                        </div>
+                        <div class="stamp-card">
+                            <div class="stamp-grid">
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped recent">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp empty next">
+                                    <div class="stamp-number">9</div>
+                                </div>
+                                <div class="stamp empty reward-stamp">
+                                    <i class="fas fa-gift"></i>
+                                    <span class="reward-text">GRATIS</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="last-visit">
-                        <span class="last-visit-text">Última visita: 18 de abril</span>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reward-card starbucks clickable-card enhanced-design" data-card-id="starbucks" onclick="openTermsModal('starbucks')">
+                <div class="reward-card-header">
+                    <div class="brand-section">
+                        <div class="brand-info">
+                            <h4 class="brand-name">Starbucks</h4>
+                            <span class="reward-type">Bebida Gratis</span>
+                        </div>
+                    </div>
+                    <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('starbucks')" title="Eliminar tarjeta">
+                        <span class="remove-icon">×</span>
+                    </button>
+                </div>
+                <div class="reward-card-content">
+                    <div class="stamp-section">
+                        <div class="stamp-header">
+                            <div class="visits-info">
+                                <span class="stamp-count">5 <span class="remaining-word">visitas restantes</span></span>
+                            </div>
+                        </div>
+                        <div class="stamp-card">
+                            <div class="stamp-grid">
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped recent">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp empty next">
+                                    <div class="stamp-number">6</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">7</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">8</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">9</div>
+                                </div>
+                                <div class="stamp empty reward-stamp">
+                                    <i class="fas fa-gift"></i>
+                                    <span class="reward-text">GRATIS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reward-card mcdonalds clickable-card enhanced-design" data-card-id="mcdonalds" onclick="openTermsModal('mcdonalds')">
+                <div class="reward-card-header">
+                    <div class="brand-section">
+                        <div class="brand-info">
+                            <h4 class="brand-name">McDonald's</h4>
+                            <span class="reward-type">Combo Gratis</span>
+                        </div>
+                    </div>
+                    <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('mcdonalds')" title="Eliminar tarjeta">
+                        <span class="remove-icon">×</span>
+                    </button>
+                </div>
+                <div class="reward-card-content">
+                    <div class="stamp-section">
+                        <div class="stamp-header">
+                            <div class="visits-info">
+                                <span class="stamp-count">1 <span class="remaining-word">visita restante</span></span>
+                            </div>
+                        </div>
+                        <div class="stamp-card">
+                            <div class="stamp-grid">
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped recent">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp empty reward-stamp next">
+                                    <i class="fas fa-gift"></i>
+                                    <span class="reward-text">GRATIS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reward-card subway clickable-card enhanced-design" data-card-id="subway" onclick="openTermsModal('subway')">
+                <div class="reward-card-header">
+                    <div class="brand-section">
+                        <div class="brand-info">
+                            <h4 class="brand-name">Subway</h4>
+                            <span class="reward-type">Sándwich Gratis</span>
+                        </div>
+                    </div>
+                    <button class="remove-card-btn" onclick="event.stopPropagation(); removeRewardCard('subway')" title="Eliminar tarjeta">
+                        <span class="remove-icon">×</span>
+                    </button>
+                </div>
+                <div class="reward-card-content">
+                    <div class="stamp-section">
+                        <div class="stamp-header">
+                            <div class="visits-info">
+                                <span class="stamp-count">7 <span class="remaining-word">visitas restantes</span></span>
+                            </div>
+                        </div>
+                        <div class="stamp-card">
+                            <div class="stamp-grid">
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp stamped recent">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="stamp empty next">
+                                    <div class="stamp-number">4</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">5</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">6</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">7</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">8</div>
+                                </div>
+                                <div class="stamp empty">
+                                    <div class="stamp-number">9</div>
+                                </div>
+                                <div class="stamp empty reward-stamp">
+                                    <i class="fas fa-gift"></i>
+                                    <span class="reward-text">GRATIS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
                     </div>
                 </div>
             </div>
@@ -361,15 +604,15 @@
             
 
         </div>
-    </div>
-    
+                </div>
+                
     <!-- Welcome Modal -->
     <div id="welcomeModal" class="modal-overlay">
         <div class="modal-dialog" onclick="event.stopPropagation()">
             <div class="modal-header">
                 <h3>¡Bienvenido a tu Panel SimpleGo!</h3>
                 <button id="closeWelcomeModal" class="modal-close-btn">&times;</button>
-            </div>
+                </div>
             <div class="modal-body">
                 <p>Descubre todo lo que puedes hacer:</p>
                 
@@ -389,7 +632,7 @@
                         <span class="feature-title">Tu Balance, Créditos e Historial</span>
                         Revisa tus créditos acumulados, historial de transacciones y canjéalos por experiencias increíbles y Gift Cards. Todo en un solo lugar.
                     </p>
-                </div>
+                    </div>
 
                 <div class="feature-coming-soon">
                     <p>Sigue explorando tu panel y mantente atento a las nuevas funciones que iremos lanzando. ¡Lo mejor está por venir! 🚀</p>
@@ -400,7 +643,7 @@
             </div>
         </div>
     </div>
-
+    
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

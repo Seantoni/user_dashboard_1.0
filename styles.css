@@ -1863,6 +1863,7 @@ html {
     flex-shrink: 0;
     min-height: 192px; /* 240px * 0.8 */
     border-radius: 16px; /* 20px * 0.8 */
+    border: 0px;
     padding: 14px; /* 18px * 0.8 */
     color: white;
     position: relative;
@@ -1870,12 +1871,16 @@ html {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Matte finish effects */
+    filter: saturate(0.85) contrast(1.1);
+    backdrop-filter: blur(0.5px);
 }
 
 
 
 .reward-card.olive-garden {
-    background: linear-gradient(135deg, #6b64db 0%, #9a66da 50%, #7ca8d0 100%);
+    background: linear-gradient(135deg, #8A2BE2 0%, #9932CC 50%, #BA55D3 100%);
+    border: 0px;
     position: relative;
 }
 
@@ -1886,14 +1891,433 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(212, 227, 51, 0.1) 0%, transparent 30%, rgba(174, 213, 212, 0.1) 70%, transparent 100%);
-    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(186, 85, 211, 0.15) 0%, transparent 30%, rgba(138, 43, 226, 0.15) 70%, transparent 100%);
+    border-radius: 16px;
     pointer-events: none;
 }
 
-.reward-card.papa-johns {
-    background: linear-gradient(135deg, #dc5655 0%, #ef8632 50%, #f4d757 100%);
+.reward-card.olive-garden::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+}
+
+/* Enhanced Design for Olive Garden Card */
+.reward-card.olive-garden.enhanced-design {
+    padding: 20px;
+    min-height: 220px;
+    background: #9A66DA;
     position: relative;
+    overflow: hidden;
+}
+
+.reward-card.olive-garden.enhanced-design::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(186, 85, 211, 0.1) 0%, transparent 50%, rgba(138, 43, 226, 0.1) 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.reward-card.olive-garden.enhanced-design .reward-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.reward-card.olive-garden.enhanced-design .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reward-card.olive-garden.enhanced-design .brand-logo {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reward-card.olive-garden.enhanced-design .brand-logo i {
+    font-size: 20px;
+    color: white;
+}
+
+.reward-card.olive-garden.enhanced-design .brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reward-card.olive-garden.enhanced-design .brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.reward-card.olive-garden.enhanced-design .reward-type {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-section {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.reward-card.olive-garden.enhanced-design .visits-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-count {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-count::first-letter {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #F4D757 0%, #BBCE52 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 0.85;
+    position: relative;
+    top: 3px;
+    font-feature-settings: "kern" 1, "ss01" 1;
+    letter-spacing: -0.03em;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-count .remaining-word {
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 0.01em;
+}
+
+.reward-card.olive-garden.enhanced-design .completion-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    align-items: center;
+    justify-items: center;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp.stamped {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp.stamped i {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.reward-card.olive-garden.enhanced-design .stamp.empty {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.reward-card.olive-garden.enhanced-design .stamp.empty.next {
+    border: 1px solid rgba(244, 215, 87, 0.4);
+    color: rgba(244, 215, 87, 0.7);
+    background: rgba(244, 215, 87, 0.08);
+}
+
+.reward-card.olive-garden.enhanced-design .stamp-number {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.reward-card.olive-garden.enhanced-design .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.reward-card.olive-garden.enhanced-design .visits-remaining.enhanced,
+.reward-card.olive-garden.enhanced-design .last-visit.enhanced {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.reward-card.olive-garden.enhanced-design .visits-remaining.enhanced i,
+.reward-card.olive-garden.enhanced-design .last-visit.enhanced i {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.reward-card.papa-johns {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+    border: 0px;
+    position: relative;
+}
+
+/* Enhanced Design for Papa Johns Card */
+.reward-card.papa-johns.enhanced-design {
+    padding: 20px;
+    min-height: 220px;
+    background: #EF8632;
+    position: relative;
+    overflow: hidden;
+}
+
+.reward-card.papa-johns.enhanced-design::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.1) 0%, transparent 50%, rgba(255, 165, 0, 0.1) 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.reward-card.papa-johns.enhanced-design .reward-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.reward-card.papa-johns.enhanced-design .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reward-card.papa-johns.enhanced-design .brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reward-card.papa-johns.enhanced-design .brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.reward-card.papa-johns.enhanced-design .reward-type {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-section {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.reward-card.papa-johns.enhanced-design .visits-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-count {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-count::first-letter {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #F4D757 0%, #BBCE52 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 0.85;
+    position: relative;
+    top: 3px;
+    font-feature-settings: "kern" 1, "ss01" 1;
+    letter-spacing: -0.03em;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-count .remaining-word {
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 0.01em;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.reward-card.papa-johns.enhanced-design .stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    align-items: center;
+    justify-items: center;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp.stamped {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp.stamped i {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.reward-card.papa-johns.enhanced-design .stamp.empty {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.reward-card.papa-johns.enhanced-design .stamp.empty.next {
+    border: 1px solid rgba(244, 215, 87, 0.4);
+    color: rgba(244, 215, 87, 0.7);
+    background: rgba(244, 215, 87, 0.08);
+}
+
+
+
+.reward-card.papa-johns.enhanced-design .stamp-number {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.reward-card.papa-johns.enhanced-design .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .reward-card.papa-johns::before {
@@ -1903,14 +2327,394 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(244, 215, 87, 0.1) 0%, transparent 30%, rgba(239, 134, 50, 0.1) 70%, transparent 100%);
-    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.15) 0%, transparent 30%, rgba(255, 165, 0, 0.15) 70%, transparent 100%);
+    border-radius: 16px;
     pointer-events: none;
+}
+
+.reward-card.papa-johns::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+}
+
+.reward-card.starbucks {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 50%, #87CEEB 100%);
+    border: 0px;
+    position: relative;
+}
+
+/* Enhanced Design for All Cards - Shared Styles */
+.reward-card.enhanced-design {
+    padding: 20px;
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reward-card.enhanced-design::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.reward-card.enhanced-design .reward-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.reward-card.enhanced-design .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reward-card.enhanced-design .brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reward-card.enhanced-design .brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.reward-card.enhanced-design .reward-type {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.reward-card.enhanced-design .stamp-section {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.reward-card.enhanced-design .stamp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.reward-card.enhanced-design .visits-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reward-card.enhanced-design .stamp-count {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.reward-card.enhanced-design .stamp-count::first-letter {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #F4D757 0%, #BBCE52 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 0.85;
+    position: relative;
+    top: 3px;
+    font-feature-settings: "kern" 1, "ss01" 1;
+    letter-spacing: -0.03em;
+}
+
+.reward-card.enhanced-design .stamp-count .remaining-word {
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 0.01em;
+}
+
+.reward-card.enhanced-design .stamp-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.reward-card.enhanced-design .stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    align-items: center;
+    justify-items: center;
+}
+
+.reward-card.enhanced-design .stamp {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.reward-card.enhanced-design .stamp.stamped {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.reward-card.enhanced-design .stamp.stamped i {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.reward-card.enhanced-design .stamp.empty {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.reward-card.enhanced-design .stamp.empty.next {
+    border: 1px solid rgba(244, 215, 87, 0.4);
+    color: rgba(244, 215, 87, 0.7);
+    background: rgba(244, 215, 87, 0.08);
+}
+
+.reward-card.enhanced-design .stamp.reward-stamp {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex-direction: column;
+    gap: 1px;
+    font-size: 9px;
+    padding: 3px;
+    font-weight: 600;
+}
+
+.reward-card.enhanced-design .stamp.reward-stamp i {
+    font-size: 12px;
+    color: white;
+}
+
+.reward-card.enhanced-design .stamp.reward-stamp .reward-text {
+    font-size: 6px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.reward-card.enhanced-design .stamp-number {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.reward-card.enhanced-design .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific Colors for Each Card */
+.reward-card.monthly-challenge.enhanced-design {
+    background: #6b64db;
+}
+
+.reward-card.monthly-challenge.enhanced-design::before {
+    background: linear-gradient(45deg, rgba(107, 100, 219, 0.1) 0%, transparent 50%, rgba(138, 132, 226, 0.1) 100%);
+}
+
+.reward-card.monthly-challenge.enhanced-design .challenge-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reward-card.monthly-challenge.enhanced-design .challenge-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.reward-card.monthly-challenge.enhanced-design .challenge-progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.reward-card.monthly-challenge.enhanced-design .challenge-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #F4D757, #BBCE52);
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.reward-card.monthly-challenge.enhanced-design .challenge-time-remaining {
+    text-align: center;
+}
+
+.reward-card.monthly-challenge.enhanced-design .time-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.reward-card.starbucks.enhanced-design {
+    background: #7CA8D0;
+}
+
+.reward-card.starbucks.enhanced-design::before {
+    background: linear-gradient(45deg, rgba(65, 105, 225, 0.1) 0%, transparent 50%, rgba(30, 144, 255, 0.1) 100%);
+}
+
+.reward-card.mcdonalds.enhanced-design {
+    background: #BBCE52;
+}
+
+.reward-card.mcdonalds.enhanced-design::before {
+    background: linear-gradient(45deg, rgba(50, 205, 50, 0.1) 0%, transparent 50%, rgba(34, 139, 34, 0.1) 100%);
+}
+
+.reward-card.subway.enhanced-design {
+    background: #dc5655;
+}
+
+.reward-card.subway.enhanced-design::before {
+    background: linear-gradient(45deg, rgba(220, 20, 60, 0.1) 0%, transparent 50%, rgba(178, 34, 34, 0.1) 100%);
+}
+
+.reward-card.starbucks::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(65, 105, 225, 0.15) 0%, transparent 30%, rgba(30, 144, 255, 0.15) 70%, transparent 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.reward-card.starbucks::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+}
+
+.reward-card.mcdonalds {
+    background: linear-gradient(135deg, #32CD32 0%, #228B22 50%, #006400 100%);
+    border: 0px;
+    position: relative;
+}
+
+.reward-card.mcdonalds::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(50, 205, 50, 0.15) 0%, transparent 30%, rgba(34, 139, 34, 0.15) 70%, transparent 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.reward-card.mcdonalds::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+}
+
+.reward-card.subway {
+    background: linear-gradient(135deg, #DC143C 0%, #B22222 50%, #8B0000 100%);
+    border: 0px;
+    position: relative;
+}
+
+.reward-card.subway::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(220, 20, 60, 0.15) 0%, transparent 30%, rgba(178, 34, 34, 0.15) 70%, transparent 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.reward-card.subway::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
 }
 
 .reward-card.add-more {
     background: linear-gradient(135deg, rgba(107, 100, 219, 0.1) 0%, rgba(212, 227, 51, 0.05) 100%);
-    border: 2px dashed rgba(107, 100, 219, 0.3);
+    border: 0px;
     backdrop-filter: blur(10px);
     position: relative;
     transition: all 0.3s ease;
@@ -2105,6 +2909,16 @@ html {
     border-radius: 20px;
 }
 
+.simplego-cards-content:hover::before {
+    opacity: 1;
+}
+
+.simplego-cards-content:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(107, 100, 219, 0.15);
+}
+
 
 
 .simplego-cards-header {
@@ -2130,6 +2944,11 @@ html {
 .simplego-cards-icon i {
     font-size: 28px;
     color: white;
+}
+
+.simplego-cards-content:hover .simplego-cards-icon {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(107, 100, 219, 0.35);
 }
 
 
@@ -2174,6 +2993,12 @@ html {
 .simplego-cards-cta i {
     font-size: 14px;
     opacity: 0.8;
+}
+
+.simplego-cards-content:hover .simplego-cards-cta {
+    background: #5A4FCF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 100, 219, 0.35);
 }
 
 /* Mobile responsiveness for side-by-side layout */
@@ -2485,6 +3310,7 @@ html {
 
 .reward-card-content {
     margin-top: 12px;
+    margin-bottom: 0;
 }
 
 .reward-card-title {
